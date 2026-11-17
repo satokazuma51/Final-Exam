@@ -1,0 +1,19 @@
+{
+  "health": {
+    "url": "http://localhost:8501/_stcore/health",
+    "http_status": 200,
+    "response_bytes": 2
+  },
+  "page": {
+    "url": "http://localhost:8501",
+    "http_status": 200,
+    "response_bytes": 1522
+  },
+  "checked_utc": "2026-11-17T08:14:56.622724+00:00",
+  "model_version": "homecredit-20261117T080502Z",
+  "feature_version": "features-v2",
+  "tests": 36,
+  "failures": 0,
+  "browser_pixel_review": "unavailable; actual Streamlit interaction tests executed",
+  "preview_server": "stopped after QA; launch command documented in README"
+}

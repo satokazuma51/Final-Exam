@@ -1,0 +1,73 @@
+erDiagram
+    CLIENTS ||--o{ APPLICATIONS : submits
+    CLIENTS ||--o{ AGREEMENTS : owns
+    PRODUCTS ||--o{ APPLICATIONS : offers
+    PRODUCTS ||--o{ AGREEMENTS : defines
+    APPLICATIONS ||--o{ DECISIONS : versions
+    APPLICATIONS ||--o| AGREEMENTS : disbursed_separately
+    MODEL_VERSIONS ||--o{ DECISIONS : scored_by
+    DECISIONS ||--o| AGREEMENTS : approved_basis
+    AGREEMENTS ||--o{ SCHEDULED_INSTALLMENTS : obligations
+    AGREEMENTS ||--o{ TRANSACTIONS : dated_events
+    CLIENTS {
+        integer client_id PK
+        text full_name
+        integer source_application_id
+        text source_kind
+        integer is_synthetic
+    }
+    APPLICATIONS {
+        integer application_id PK
+        integer client_id FK
+        text product FK
+        integer amount_cents
+        text operation_key UK
+        text inputs_json
+    }
+    DECISIONS {
+        integer decision_id PK
+        integer application_id FK
+        integer version
+        text model_version FK
+        text policy_version
+        text feature_snapshot_json
+    }
+    AGREEMENTS {
+        integer agreement_id PK
+        integer application_id FK
+        integer decision_id FK
+        integer client_id FK
+        integer credit_limit_cents
+        text opened_date
+    }
+    TRANSACTIONS {
+        integer transaction_id PK
+        integer agreement_id FK
+        text transaction_date
+        text kind
+        integer amount_cents
+        integer principal_cents
+        integer interest_cents
+        text operation_key UK
+    }
+    SCHEDULED_INSTALLMENTS {
+        integer schedule_id PK
+        integer agreement_id FK
+        integer installment_no
+        text due_date
+        integer principal_cents
+        integer interest_cents
+    }
+    DEMO_METADATA {
+        text demo_key PK
+        integer seed
+        text generator_version
+        text reference_date
+        text metadata_json
+    }
+    SOURCE_APPLICATIONS ||--o{ SOURCE_BUREAU : SK_ID_CURR
+    SOURCE_BUREAU ||--o{ SOURCE_BUREAU_BALANCE : SK_ID_BUREAU
+    SOURCE_APPLICATIONS ||--o{ SOURCE_PREVIOUS : SK_ID_CURR
+    SOURCE_APPLICATIONS ||--o{ SOURCE_POS : SK_ID_CURR
+    SOURCE_APPLICATIONS ||--o{ SOURCE_CARDS : SK_ID_CURR
+    SOURCE_APPLICATIONS ||--o{ SOURCE_PAYMENTS : SK_ID_CURR

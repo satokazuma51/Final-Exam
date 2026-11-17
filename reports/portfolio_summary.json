@@ -1,0 +1,23 @@
+{
+  "clients": 240,
+  "applications": 241,
+  "decisions": 241,
+  "approvals": 164,
+  "rejections": 77,
+  "pending": 0,
+  "approval_rate": 0.6804979253112033,
+  "disbursed_count": 117,
+  "disbursed_amount": 3937932.7,
+  "active_agreements": 89,
+  "closed_agreements": 28,
+  "active_portfolio_balance": 2409141.22,
+  "agreements_in_arrears": 46,
+  "overdue_amount": 464259.65,
+  "payments_received": 1683139.05,
+  "principal_received": 1528791.48,
+  "interest_received": 154347.57,
+  "average_disbursed_amount": 33657.54,
+  "average_risk": 0.06722294569952836,
+  "total_credit_limits": 233571.09,
+  "drawn_balance": 124028.26
+}

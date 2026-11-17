@@ -1,0 +1,56 @@
+{
+  "paths": {
+    "data_dir": "home-credit-default-risk",
+    "processed_dir": "data/processed",
+    "artifact_dir": "artifacts",
+    "reports_dir": "reports",
+    "database": "data/lending.sqlite",
+    "analytics_database": "data/source.sqlite"
+  },
+  "training": {
+    "seed": 42,
+    "chunksize": 100000,
+    "n_jobs": 4,
+    "cv_folds": 3,
+    "search_rows": 50000,
+    "permutation_rows": 2500,
+    "test_size": 0.2,
+    "validation_size": 0.2,
+    "threshold_criterion": "maximum_validation_f1",
+    "max_train_rows": null
+  },
+  "policy": {
+    "version": "educational-v1",
+    "min_age": 18,
+    "max_age": 75,
+    "max_dti": 0.5,
+    "min_remaining_income": 1000.0
+  },
+  "demo": {
+    "seed": 42,
+    "reference_date": "2026-10-31",
+    "clients": 240,
+    "generator_version": "demo-v2"
+  },
+  "products": {
+    "cash": {
+      "name": "Денежный кредит",
+      "annual_rate": 18.0,
+      "min_amount": 1000.0,
+      "max_amount": 5000000.0,
+      "min_term_months": 3,
+      "max_term_months": 60
+    },
+    "revolving": {
+      "name": "Возобновляемая кредитная линия",
+      "annual_rate": 24.0,
+      "min_amount": 1000.0,
+      "max_amount": 1000000.0,
+      "min_term_months": 1,
+      "max_term_months": 60,
+      "revolving_min_principal_pct": 0.05,
+      "revolving_min_payment": 100.0
+    }
+  },
+  "currency": "у.е."
+}

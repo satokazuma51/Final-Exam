@@ -1,0 +1,1259 @@
+{
+  "version": "homecredit-20261117T080502Z",
+  "fingerprint": {
+    "feature_size": 19195267,
+    "feature_mtime_ns": 1794902697441976000,
+    "feature_version": "features-v2",
+    "training": {
+      "seed": 42,
+      "chunksize": 100000,
+      "n_jobs": 4,
+      "cv_folds": 3,
+      "search_rows": 50000,
+      "permutation_rows": 2500,
+      "test_size": 0.2,
+      "validation_size": 0.2,
+      "threshold_criterion": "maximum_validation_f1",
+      "max_train_rows": null
+    }
+  },
+  "created_utc": "2026-11-17T08:05:02.048929+00:00",
+  "models": [
+    {
+      "variant": "form",
+      "model": "DummyClassifier",
+      "training_seconds": 0.48025969974696636,
+      "threshold": 0.08074536548673648,
+      "threshold_selection": {
+        "criterion": "maximum_validation_f1",
+        "f1": 0.14936960250353565,
+        "precision": 0.08071282234724074,
+        "recall": 1.0
+      },
+      "validation_roc_auc": 0.5,
+      "validation": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.08071282234724074,
+        "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+        "precision": 0.08071282234724074,
+        "recall": 1.0,
+        "f1": 0.14936960250353565,
+        "confusion_matrix": [
+          [
+            0,
+            28269
+          ],
+          [
+            0,
+            2482
+          ]
+        ],
+        "confusion_matrix_labels": [
+          [
+            "TN",
+            "FP"
+          ],
+          [
+            "FN",
+            "TP"
+          ]
+        ],
+        "brier_score": 0.0741982637150394,
+        "log_loss": 0.28050689589612204,
+        "threshold": 0.08074536548673648,
+        "calibration_curve": {
+          "predicted": [
+            0.08074536548673981
+          ],
+          "observed": [
+            0.08071282234724074
+          ]
+        }
+      },
+      "params": {
+        "constant": null,
+        "random_state": 42,
+        "strategy": "prior"
+      },
+      "memory": {
+        "working_set_mb": 541.6015625,
+        "peak_working_set_mb": 618.01171875
+      },
+      "inference_seconds": 0.13219800032675266,
+      "inference_rows": 61503,
+      "roc_auc": 0.5,
+      "pr_auc": 0.08072776937710356,
+      "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+      "precision": 0.08072776937710356,
+      "recall": 1.0,
+      "f1": 0.14939519768911355,
+      "confusion_matrix": [
+        [
+          0,
+          56538
+        ],
+        [
+          0,
+          4965
+        ]
+      ],
+      "confusion_matrix_labels": [
+        [
+          "TN",
+          "FP"
+        ],
+        [
+          "FN",
+          "TP"
+        ]
+      ],
+      "brier_score": 0.0742107969381238,
+      "log_loss": 0.2805432509977591,
+      "calibration_curve": {
+        "predicted": [
+          0.08074536548673157
+        ],
+        "observed": [
+          0.08072776937710356
+        ]
+      },
+      "model_bytes": 2162
+    },
+    {
+      "variant": "form",
+      "model": "LogisticRegression",
+      "training_seconds": 1.7412048997357488,
+      "threshold": 0.08974769863013043,
+      "threshold_selection": {
+        "criterion": "maximum_validation_f1",
+        "f1": 0.18608964451313756,
+        "precision": 0.11512717536813923,
+        "recall": 0.48509266720386784
+      },
+      "validation_roc_auc": 0.6047982418476529,
+      "validation": {
+        "roc_auc": 0.6047982418476529,
+        "pr_auc": 0.11110066473957214,
+        "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+        "precision": 0.11512717536813923,
+        "recall": 0.48509266720386784,
+        "f1": 0.18608964451313756,
+        "confusion_matrix": [
+          [
+            19015,
+            9254
+          ],
+          [
+            1278,
+            1204
+          ]
+        ],
+        "confusion_matrix_labels": [
+          [
+            "TN",
+            "FP"
+          ],
+          [
+            "FN",
+            "TP"
+          ]
+        ],
+        "brier_score": 0.07346630198597662,
+        "log_loss": 0.27547194045464596,
+        "threshold": 0.08974769863013043,
+        "calibration_curve": {
+          "predicted": [
+            0.042529356622266555,
+            0.05313862281280682,
+            0.05910135383898506,
+            0.06522503803766569,
+            0.07226004374347449,
+            0.08026092983421686,
+            0.08896693002538934,
+            0.09934755594296502,
+            0.11297024002835677,
+            0.1384133878029189
+          ],
+          "observed": [
+            0.0377113133940182,
+            0.053008130081300814,
+            0.0689430894308943,
+            0.06439024390243903,
+            0.06926829268292684,
+            0.08130081300813008,
+            0.08195121951219513,
+            0.09528455284552846,
+            0.12292682926829268,
+            0.13235772357723577
+          ]
+        }
+      },
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": null,
+        "max_iter": 500,
+        "multi_class": "deprecated",
+        "n_jobs": null,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "memory": {
+        "working_set_mb": 542.55078125,
+        "peak_working_set_mb": 636.80859375
+      },
+      "inference_seconds": 0.08761369995772839,
+      "inference_rows": 61503,
+      "roc_auc": 0.6157812352105547,
+      "pr_auc": 0.11571373242896571,
+      "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+      "precision": 0.11911370597243491,
+      "recall": 0.5013091641490433,
+      "f1": 0.19249062294574842,
+      "confusion_matrix": [
+        [
+          38131,
+          18407
+        ],
+        [
+          2476,
+          2489
+        ]
+      ],
+      "confusion_matrix_labels": [
+        [
+          "TN",
+          "FP"
+        ],
+        [
+          "FN",
+          "TP"
+        ]
+      ],
+      "brier_score": 0.0733152798522613,
+      "log_loss": 0.274582438794106,
+      "calibration_curve": {
+        "predicted": [
+          0.04255907758164999,
+          0.053211603200032265,
+          0.05897633469188023,
+          0.06491557171631869,
+          0.07189841185689952,
+          0.07988399484965547,
+          0.0888328494865866,
+          0.09940316771807334,
+          0.11283391019828198,
+          0.13830475377108326
+        ],
+        "observed": [
+          0.04080637294748821,
+          0.05056910569105691,
+          0.056910569105691054,
+          0.05967479674796748,
+          0.06649325312957242,
+          0.07983739837398374,
+          0.0897560975609756,
+          0.10130081300813008,
+          0.12747967479674796,
+          0.1344496829783775
+        ]
+      },
+      "model_bytes": 2819
+    },
+    {
+      "variant": "form",
+      "model": "LightGBM",
+      "training_seconds": 6.127422399818897,
+      "threshold": 0.09736433237058799,
+      "threshold_selection": {
+        "criterion": "maximum_validation_f1",
+        "f1": 0.2039544379969912,
+        "precision": 0.13906799531066824,
+        "recall": 0.38235294117647056
+      },
+      "validation_roc_auc": 0.6333833321518099,
+      "validation": {
+        "roc_auc": 0.6333833321518099,
+        "pr_auc": 0.1358986826137549,
+        "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+        "precision": 0.13906799531066824,
+        "recall": 0.38235294117647056,
+        "f1": 0.2039544379969912,
+        "confusion_matrix": [
+          [
+            22394,
+            5875
+          ],
+          [
+            1533,
+            949
+          ]
+        ],
+        "confusion_matrix_labels": [
+          [
+            "TN",
+            "FP"
+          ],
+          [
+            "FN",
+            "TP"
+          ]
+        ],
+        "brier_score": 0.07275092077600545,
+        "log_loss": 0.2718237158890813,
+        "threshold": 0.09736433237058799,
+        "calibration_curve": {
+          "predicted": [
+            0.04319516838836513,
+            0.05085090238511656,
+            0.05525869921178868,
+            0.05902093317798831,
+            0.06386650740199072,
+            0.07083370649668395,
+            0.08032118356149792,
+            0.0930385120372348,
+            0.11671101610020868,
+            0.17920806821192214
+          ],
+          "observed": [
+            0.031148604802076575,
+            0.04949527841094106,
+            0.05886178861788618,
+            0.06117800195248942,
+            0.07087126137841353,
+            0.07937540663630449,
+            0.08,
+            0.09203252032520325,
+            0.11544715447154472,
+            0.16878048780487806
+          ]
+        }
+      },
+      "params": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 0.9,
+        "importance_type": "split",
+        "learning_rate": 0.05,
+        "max_depth": -1,
+        "min_child_samples": 60,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 200,
+        "n_jobs": 4,
+        "num_leaves": 15,
+        "objective": null,
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "memory": {
+        "working_set_mb": 549.5859375,
+        "peak_working_set_mb": 636.80859375
+      },
+      "inference_seconds": 0.3974937004968524,
+      "inference_rows": 61503,
+      "roc_auc": 0.6478140538547148,
+      "pr_auc": 0.14502476658869287,
+      "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+      "precision": 0.14502591051748048,
+      "recall": 0.4002014098690836,
+      "f1": 0.21290046073074037,
+      "confusion_matrix": [
+        [
+          44824,
+          11714
+        ],
+        [
+          2978,
+          1987
+        ]
+      ],
+      "confusion_matrix_labels": [
+        [
+          "TN",
+          "FP"
+        ],
+        [
+          "FN",
+          "TP"
+        ]
+      ],
+      "brier_score": 0.07242759799163273,
+      "log_loss": 0.2700186387686329,
+      "calibration_curve": {
+        "predicted": [
+          0.043028901768042624,
+          0.050686458142573367,
+          0.0551418382302479,
+          0.05892556761869084,
+          0.06359091162152586,
+          0.07024281627216362,
+          0.0798773020023218,
+          0.09304467935180322,
+          0.11704726373482295,
+          0.1784232897001863
+        ],
+        "observed": [
+          0.03186473744106649,
+          0.04227642276422764,
+          0.05121951219512195,
+          0.06130081300813008,
+          0.07023248252316697,
+          0.06943089430894309,
+          0.0865040650406504,
+          0.09300813008130081,
+          0.12715447154471546,
+          0.1742806047797106
+        ]
+      },
+      "model_bytes": 152336
+    },
+    {
+      "variant": "history",
+      "model": "DummyClassifier",
+      "training_seconds": 2.808825899846852,
+      "threshold": 0.08074536548673648,
+      "threshold_selection": {
+        "criterion": "maximum_validation_f1",
+        "f1": 0.14936960250353565,
+        "precision": 0.08071282234724074,
+        "recall": 1.0
+      },
+      "validation_roc_auc": 0.5,
+      "validation": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.08071282234724074,
+        "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+        "precision": 0.08071282234724074,
+        "recall": 1.0,
+        "f1": 0.14936960250353565,
+        "confusion_matrix": [
+          [
+            0,
+            28269
+          ],
+          [
+            0,
+            2482
+          ]
+        ],
+        "confusion_matrix_labels": [
+          [
+            "TN",
+            "FP"
+          ],
+          [
+            "FN",
+            "TP"
+          ]
+        ],
+        "brier_score": 0.0741982637150394,
+        "log_loss": 0.28050689589612204,
+        "threshold": 0.08074536548673648,
+        "calibration_curve": {
+          "predicted": [
+            0.08074536548673981
+          ],
+          "observed": [
+            0.08071282234724074
+          ]
+        }
+      },
+      "params": {
+        "constant": null,
+        "random_state": 42,
+        "strategy": "prior"
+      },
+      "memory": {
+        "working_set_mb": 601.6484375,
+        "peak_working_set_mb": 996.65625
+      },
+      "inference_seconds": 0.366898600012064,
+      "inference_rows": 61503,
+      "roc_auc": 0.5,
+      "pr_auc": 0.08072776937710356,
+      "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+      "precision": 0.08072776937710356,
+      "recall": 1.0,
+      "f1": 0.14939519768911355,
+      "confusion_matrix": [
+        [
+          0,
+          56538
+        ],
+        [
+          0,
+          4965
+        ]
+      ],
+      "confusion_matrix_labels": [
+        [
+          "TN",
+          "FP"
+        ],
+        [
+          "FN",
+          "TP"
+        ]
+      ],
+      "brier_score": 0.0742107969381238,
+      "log_loss": 0.2805432509977591,
+      "calibration_curve": {
+        "predicted": [
+          0.08074536548673157
+        ],
+        "observed": [
+          0.08072776937710356
+        ]
+      },
+      "model_bytes": 2630
+    },
+    {
+      "variant": "history",
+      "model": "LogisticRegression",
+      "training_seconds": 14.189879399724305,
+      "threshold": 0.11753030482104117,
+      "threshold_selection": {
+        "criterion": "maximum_validation_f1",
+        "f1": 0.2366183091545773,
+        "precision": 0.171563293434893,
+        "recall": 0.38114423851732476
+      },
+      "validation_roc_auc": 0.674449983779352,
+      "validation": {
+        "roc_auc": 0.674449983779352,
+        "pr_auc": 0.16345938601467364,
+        "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+        "precision": 0.171563293434893,
+        "recall": 0.38114423851732476,
+        "f1": 0.2366183091545773,
+        "confusion_matrix": [
+          [
+            23701,
+            4568
+          ],
+          [
+            1536,
+            946
+          ]
+        ],
+        "confusion_matrix_labels": [
+          [
+            "TN",
+            "FP"
+          ],
+          [
+            "FN",
+            "TP"
+          ]
+        ],
+        "brier_score": 0.07162105204751675,
+        "log_loss": 0.26540680760556307,
+        "threshold": 0.11753030482104117,
+        "calibration_curve": {
+          "predicted": [
+            0.024135928256204118,
+            0.0360073616489975,
+            0.04465931713238129,
+            0.052973637971037976,
+            0.062001720964397405,
+            0.07240832666306296,
+            0.08466223646491373,
+            0.10124677109777695,
+            0.1273967179385113,
+            0.20285087455727951
+          ],
+          "observed": [
+            0.023732119635890767,
+            0.03804878048780488,
+            0.04878048780487805,
+            0.050731707317073174,
+            0.06699186991869918,
+            0.07252032520325204,
+            0.07772357723577236,
+            0.09853658536585366,
+            0.1359349593495935,
+            0.19414634146341464
+          ]
+        }
+      },
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": null,
+        "max_iter": 500,
+        "multi_class": "deprecated",
+        "n_jobs": null,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "memory": {
+        "working_set_mb": 602.515625,
+        "peak_working_set_mb": 1091.265625
+      },
+      "inference_seconds": 0.505319899879396,
+      "inference_rows": 61503,
+      "roc_auc": 0.6858323628518238,
+      "pr_auc": 0.17110874117916536,
+      "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+      "precision": 0.17665585919407134,
+      "recall": 0.38408862034239677,
+      "f1": 0.242005076142132,
+      "confusion_matrix": [
+        [
+          47650,
+          8888
+        ],
+        [
+          3058,
+          1907
+        ]
+      ],
+      "confusion_matrix_labels": [
+        [
+          "TN",
+          "FP"
+        ],
+        [
+          "FN",
+          "TP"
+        ]
+      ],
+      "brier_score": 0.07127199204012558,
+      "log_loss": 0.26347005023215625,
+      "calibration_curve": {
+        "predicted": [
+          0.024527494062110473,
+          0.0361912708979379,
+          0.04487790848403119,
+          0.05313340094452762,
+          0.06176251987847178,
+          0.0718908896043418,
+          0.08427235640817168,
+          0.10086466167225344,
+          0.12626715234897168,
+          0.20123170415376823
+        ],
+        "observed": [
+          0.022272801170541374,
+          0.03626016260162602,
+          0.04390243902439024,
+          0.05544715447154472,
+          0.05771419281417656,
+          0.06861788617886179,
+          0.08211382113821138,
+          0.10113821138211382,
+          0.13365853658536586,
+          0.2061453422207771
+        ]
+      },
+      "model_bytes": 4452
+    },
+    {
+      "variant": "history",
+      "model": "LightGBM",
+      "training_seconds": 15.996285599656403,
+      "threshold": 0.10922859886125458,
+      "threshold_selection": {
+        "criterion": "maximum_validation_f1",
+        "f1": 0.25780346820809247,
+        "precision": 0.20099143758449753,
+        "recall": 0.35938759065269943
+      },
+      "validation_roc_auc": 0.6938404779294717,
+      "validation": {
+        "roc_auc": 0.6938404779294717,
+        "pr_auc": 0.18744783107869772,
+        "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+        "precision": 0.20099143758449753,
+        "recall": 0.35938759065269943,
+        "f1": 0.25780346820809247,
+        "confusion_matrix": [
+          [
+            24723,
+            3546
+          ],
+          [
+            1590,
+            892
+          ]
+        ],
+        "confusion_matrix_labels": [
+          [
+            "TN",
+            "FP"
+          ],
+          [
+            "FN",
+            "TP"
+          ]
+        ],
+        "brier_score": 0.07097922138184636,
+        "log_loss": 0.26277278669772597,
+        "threshold": 0.10922859886125458,
+        "calibration_curve": {
+          "predicted": [
+            0.04315008403505731,
+            0.047286845593539684,
+            0.0507591193655631,
+            0.054492188786356595,
+            0.05893539955676506,
+            0.064568036202711,
+            0.0724146241574886,
+            0.08478014458382606,
+            0.10891396600015496,
+            0.2270367992791299
+          ],
+          "observed": [
+            0.021131339401820545,
+            0.03349593495934959,
+            0.04130081300813008,
+            0.056260162601626015,
+            0.05951219512195122,
+            0.07121951219512195,
+            0.07869918699186992,
+            0.09691056910569106,
+            0.12813008130081302,
+            0.22048780487804878
+          ]
+        }
+      },
+      "params": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 0.9,
+        "importance_type": "split",
+        "learning_rate": 0.05,
+        "max_depth": -1,
+        "min_child_samples": 60,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 200,
+        "n_jobs": 4,
+        "num_leaves": 15,
+        "objective": null,
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "memory": {
+        "working_set_mb": 609.58984375,
+        "peak_working_set_mb": 1091.265625
+      },
+      "inference_seconds": 0.7263485994189978,
+      "inference_rows": 61503,
+      "roc_auc": 0.7033817553466076,
+      "pr_auc": 0.19248601031841409,
+      "pr_auc_method": "sklearn.average_precision_score: step-weighted average precision, not trapezoidal PR area",
+      "precision": 0.20155570807595516,
+      "recall": 0.35488418932527693,
+      "f1": 0.25709491500693077,
+      "confusion_matrix": [
+        [
+          49558,
+          6980
+        ],
+        [
+          3203,
+          1762
+        ]
+      ],
+      "confusion_matrix_labels": [
+        [
+          "TN",
+          "FP"
+        ],
+        [
+          "FN",
+          "TP"
+        ]
+      ],
+      "brier_score": 0.07080409954961195,
+      "log_loss": 0.26184185392024595,
+      "calibration_curve": {
+        "predicted": [
+          0.0431772265853339,
+          0.0473532150765291,
+          0.05082861491669379,
+          0.05451962988039424,
+          0.058946236047040676,
+          0.06453970512212084,
+          0.07236202704567284,
+          0.08419974834182528,
+          0.10794752877460102,
+          0.22587622373156052
+        ],
+        "observed": [
+          0.019346447732076087,
+          0.03121951219512195,
+          0.0432520325203252,
+          0.04975609756097561,
+          0.05364981303853032,
+          0.06780487804878049,
+          0.08764227642276423,
+          0.09626016260162602,
+          0.13528455284552846,
+          0.22305316208746545
+        ]
+      },
+      "model_bytes": 156639
+    }
+  ],
+  "selected": {
+    "form": {
+      "model": "LightGBM",
+      "threshold": 0.09736433237058799,
+      "criterion": "highest validation ROC-AUC among trained candidates",
+      "roc_auc": 0.6478140538547148,
+      "pr_auc": 0.14502476658869287,
+      "f1": 0.21290046073074037,
+      "brier_score": 0.07242759799163273,
+      "precision": 0.14502591051748048,
+      "recall": 0.4002014098690836,
+      "confusion_matrix": [
+        [
+          44824,
+          11714
+        ],
+        [
+          2978,
+          1987
+        ]
+      ]
+    },
+    "history": {
+      "model": "LightGBM",
+      "threshold": 0.10922859886125458,
+      "criterion": "highest validation ROC-AUC among trained candidates",
+      "roc_auc": 0.7033817553466076,
+      "pr_auc": 0.19248601031841409,
+      "f1": 0.25709491500693077,
+      "brier_score": 0.07080409954961195,
+      "precision": 0.20155570807595516,
+      "recall": 0.35488418932527693,
+      "confusion_matrix": [
+        [
+          49558,
+          6980
+        ],
+        [
+          3203,
+          1762
+        ]
+      ]
+    }
+  },
+  "feature_importance": {
+    "form": [
+      {
+        "feature": "loan_amount",
+        "importance": 0.06213431395358854,
+        "std": 0.011720264715766648
+      },
+      {
+        "feature": "monthly_payment",
+        "importance": 0.047727145429947715,
+        "std": 0.0031328361295659413
+      },
+      {
+        "feature": "employment_years",
+        "importance": 0.03635102413635616,
+        "std": 0.005186386784892583
+      },
+      {
+        "feature": "employment_type",
+        "importance": 0.028630147610061274,
+        "std": 0.0010232746512249258
+      },
+      {
+        "feature": "product",
+        "importance": 0.014883260519263475,
+        "std": 0.004254129721066091
+      },
+      {
+        "feature": "payment_to_income",
+        "importance": 0.011852751854819932,
+        "std": 0.0010588199812148202
+      },
+      {
+        "feature": "loan_to_annual_income",
+        "importance": 0.010276370326327666,
+        "std": 0.0011638402743667786
+      },
+      {
+        "feature": "monthly_income",
+        "importance": 0.005840205430464651,
+        "std": 0.0024213909641616627
+      }
+    ],
+    "history": [
+      {
+        "feature": "employment_years",
+        "importance": 0.028360864807107422,
+        "std": 0.0072060078070469435
+      },
+      {
+        "feature": "payment_late_fraction",
+        "importance": 0.026043955570491828,
+        "std": 0.0018645141276529276
+      },
+      {
+        "feature": "payment_total_amount",
+        "importance": 0.02255512757542083,
+        "std": 0.0016156968177234998
+      },
+      {
+        "feature": "loan_amount",
+        "importance": 0.01433984782290254,
+        "std": 0.00648540702634226
+      },
+      {
+        "feature": "bureau_active_count",
+        "importance": 0.010477255297331345,
+        "std": 0.00449702280933062
+      },
+      {
+        "feature": "employment_type",
+        "importance": 0.009605856146972513,
+        "std": 0.001230083843893559
+      },
+      {
+        "feature": "bureau_months",
+        "importance": 0.009504605813061784,
+        "std": 0.005620470663254329
+      },
+      {
+        "feature": "bureau_count",
+        "importance": 0.008290678937345475,
+        "std": 0.0046198157674774976
+      },
+      {
+        "feature": "product",
+        "importance": 0.007762884643555901,
+        "std": 0.00212517988091232
+      },
+      {
+        "feature": "previous_approval_rate",
+        "importance": 0.007558229713310882,
+        "std": 0.00029190255840205737
+      },
+      {
+        "feature": "card_mean_utilization",
+        "importance": 0.00654680350541581,
+        "std": 0.0014498186111039368
+      },
+      {
+        "feature": "card_months",
+        "importance": 0.006458478746046936,
+        "std": 0.00029944247688479253
+      },
+      {
+        "feature": "monthly_payment",
+        "importance": 0.006393850873338158,
+        "std": 0.0020357779903316664
+      },
+      {
+        "feature": "bureau_debt_sum",
+        "importance": 0.005545071478427255,
+        "std": 0.0011439133469482443
+      },
+      {
+        "feature": "loan_to_annual_income",
+        "importance": 0.0032658618342253365,
+        "std": 0.0016221596049943998
+      },
+      {
+        "feature": "pos_months",
+        "importance": 0.0025054071986833626,
+        "std": 0.001486441072305722
+      },
+      {
+        "feature": "payment_events",
+        "importance": 0.001616773948935446,
+        "std": 0.0006171961843703944
+      },
+      {
+        "feature": "payment_max_lateness",
+        "importance": 0.0013162543408388738,
+        "std": 0.0014455100862566517
+      },
+      {
+        "feature": "bureau_late_fraction",
+        "importance": 0.0013097915535679183,
+        "std": 0.0020982516006169405
+      },
+      {
+        "feature": "bureau_overdue_sum",
+        "importance": 0.0008466251324872331,
+        "std": 0.00032313936354466666
+      },
+      {
+        "feature": "bureau_max_dpd",
+        "importance": 0.0008153883273444573,
+        "std": 6.570500392072409e-05
+      },
+      {
+        "feature": "previous_count",
+        "importance": 0.0005956535601341351,
+        "std": 0.0003909986298891166
+      },
+      {
+        "feature": "monthly_income",
+        "importance": 0.000484709045317111,
+        "std": 0.0012020784323863443
+      },
+      {
+        "feature": "pos_late_fraction",
+        "importance": 0.0002757455902248629,
+        "std": 4.523951089624445e-05
+      },
+      {
+        "feature": "bureau_max_severity",
+        "importance": -7.109065997978892e-05,
+        "std": 7.324492240345926e-05
+      },
+      {
+        "feature": "previous_mean_credit",
+        "importance": -8.724762815698339e-05,
+        "std": 0.0006495101207248388
+      },
+      {
+        "feature": "pos_max_dpd",
+        "importance": -0.00017341812510224264,
+        "std": 0.00027682272143664255
+      },
+      {
+        "feature": "history_present",
+        "importance": -0.00026066575325939256,
+        "std": 0.00012279295814704438
+      },
+      {
+        "feature": "card_max_dpd",
+        "importance": -0.00034791338141632044,
+        "std": 0.00023804599781124258
+      },
+      {
+        "feature": "payment_to_income",
+        "importance": -0.0005310256874250796,
+        "std": 5.493369180259444e-05
+      },
+      {
+        "feature": "previous_recent_count",
+        "importance": -0.0007626088979655332,
+        "std": 0.0011072908857464592
+      }
+    ]
+  },
+  "calibration": {
+    "form": {
+      "holdout_brier_before": 0.07246055298165151,
+      "holdout_brier_after": 0.07242759799163273,
+      "holdout_curve": {
+        "predicted": [
+          0.043028901768042624,
+          0.050686458142573367,
+          0.0551418382302479,
+          0.05892556761869084,
+          0.06359091162152586,
+          0.07024281627216362,
+          0.0798773020023218,
+          0.09304467935180322,
+          0.11704726373482295,
+          0.1784232897001863
+        ],
+        "observed": [
+          0.03186473744106649,
+          0.04227642276422764,
+          0.05121951219512195,
+          0.06130081300813008,
+          0.07023248252316697,
+          0.06943089430894309,
+          0.0865040650406504,
+          0.09300813008130081,
+          0.12715447154471546,
+          0.1742806047797106
+        ]
+      }
+    },
+    "history": {
+      "holdout_brier_before": 0.0704045464346887,
+      "holdout_brier_after": 0.07080409954961195,
+      "holdout_curve": {
+        "predicted": [
+          0.0431772265853339,
+          0.0473532150765291,
+          0.05082861491669379,
+          0.05451962988039424,
+          0.058946236047040676,
+          0.06453970512212084,
+          0.07236202704567284,
+          0.08419974834182528,
+          0.10794752877460102,
+          0.22587622373156052
+        ],
+        "observed": [
+          0.019346447732076087,
+          0.03121951219512195,
+          0.0432520325203252,
+          0.04975609756097561,
+          0.05364981303853032,
+          0.06780487804878049,
+          0.08764227642276423,
+          0.09626016260162602,
+          0.13528455284552846,
+          0.22305316208746545
+        ]
+      }
+    }
+  },
+  "search": [
+    {
+      "variant": "form",
+      "model": "LogisticRegression",
+      "params": {
+        "model__C": 0.3
+      },
+      "cv_roc_auc": 0.6135506706968926,
+      "cv_std": 0.009438287437788835
+    },
+    {
+      "variant": "form",
+      "model": "LogisticRegression",
+      "params": {
+        "model__C": 1.0
+      },
+      "cv_roc_auc": 0.6136892577098058,
+      "cv_std": 0.009142482989854163
+    },
+    {
+      "variant": "form",
+      "model": "LightGBM",
+      "params": {
+        "model__num_leaves": 15
+      },
+      "cv_roc_auc": 0.6278977335407813,
+      "cv_std": 0.005544643414795705
+    },
+    {
+      "variant": "form",
+      "model": "LightGBM",
+      "params": {
+        "model__num_leaves": 31
+      },
+      "cv_roc_auc": 0.6236888920964762,
+      "cv_std": 0.006094432412042787
+    },
+    {
+      "variant": "history",
+      "model": "LogisticRegression",
+      "params": {
+        "model__C": 0.3
+      },
+      "cv_roc_auc": 0.6791376234870091,
+      "cv_std": 0.00295622145194731
+    },
+    {
+      "variant": "history",
+      "model": "LogisticRegression",
+      "params": {
+        "model__C": 1.0
+      },
+      "cv_roc_auc": 0.6791582935418484,
+      "cv_std": 0.002891946670991458
+    },
+    {
+      "variant": "history",
+      "model": "LightGBM",
+      "params": {
+        "model__num_leaves": 15
+      },
+      "cv_roc_auc": 0.682374090289746,
+      "cv_std": 0.0006160468493769193
+    },
+    {
+      "variant": "history",
+      "model": "LightGBM",
+      "params": {
+        "model__num_leaves": 31
+      },
+      "cv_roc_auc": 0.6800859877682535,
+      "cv_std": 0.0008571426265794015
+    }
+  ],
+  "split": {
+    "train": 184506,
+    "calibration": 30751,
+    "validation": 30751,
+    "holdout": 61503,
+    "seed": 42,
+    "method": "stratified source-application split; identical IDs for both variants",
+    "limitation": "SK_ID_CURR is an application identifier. No universal person identity or absolute dates are supplied; unknown repeated persons cannot be grouped.",
+    "search_rows": 50000,
+    "cv_folds": 3,
+    "holdout_access": "Holdout predictions evaluated after fitting/calibration/threshold/model selection; no holdout-based tuning"
+  },
+  "library_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "lightgbm": "4.6.0"
+  },
+  "memory_before": {
+    "working_set_mb": 168.4296875,
+    "peak_working_set_mb": 168.4296875
+  },
+  "calibration_method": "Sigmoid calibration fitted on independent calibration split; thresholds and model selection use separate validation split",
+  "risk_boundaries": "Low below half selected threshold; elevated between half threshold and threshold; high at or above threshold. Educational categories.",
+  "limitations": [
+    "Outcome is payment difficulties, not guaranteed non-repayment.",
+    "Raw historical snapshots cannot establish current debts or current creditworthiness.",
+    "Serving form features omit undisclosed external scores and sensitive fields.",
+    "Validation F1 optimizes identification of payment difficulties, not economic lending profit or a statutory policy.",
+    "Form use and demo terms may differ from source distributions; monitor calibration and drift before real use."
+  ],
+  "error_analysis": {
+    "form": {
+      "correct": 46811,
+      "false_positive": 11714,
+      "false_negative": 2978
+    },
+    "history": {
+      "correct": 51320,
+      "false_positive": 6980,
+      "false_negative": 3203
+    }
+  },
+  "model_bundle_bytes": 308300,
+  "seconds": 49.57594439946115,
+  "memory_after": {
+    "working_set_mb": 614.2578125,
+    "peak_working_set_mb": 1091.265625
+  }
+}

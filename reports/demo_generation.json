@@ -1,0 +1,33 @@
+{
+  "demo_key": "demo-v2:42:2026-10-31:240",
+  "seed": 42,
+  "generator_version": "demo-v2",
+  "reference_date": "2026-10-31",
+  "clients": 240,
+  "applications": 241,
+  "approvals": 164,
+  "rejections": 77,
+  "agreements": 117,
+  "scenarios": {
+    "closed": 18,
+    "arrears": 18,
+    "partial": 18,
+    "late_recovered": 18,
+    "timely": 35,
+    "revolving_drawn_and_available": 7,
+    "revolving_arrears": 2
+  },
+  "source_kind": "synthetic",
+  "is_synthetic": true,
+  "model_predictions_are_real": true,
+  "model_version": "homecredit-20261117T080502Z",
+  "assumptions": [
+    "Fictional names; synthetic calendar, payment behavior and interest rates.",
+    "Source income, product and employment distributions; source amounts are the starting distribution.",
+    "70% of generated requests capped to a sampled 12-25% monthly-income payment budget under the demo terms; 30% retain source-size requests. Product limits also apply.",
+    "Terms sampled from approved historical applications; not recovered current-loan terms.",
+    "Unknown source employment tenure is zero in the generated current demo scenario, not an assertion about the historical record.",
+    "No synthetic operation is used as an observed ML target."
+  ],
+  "repeat_application_id": 241
+}

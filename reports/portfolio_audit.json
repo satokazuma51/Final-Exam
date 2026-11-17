@@ -1,0 +1,154 @@
+{
+  "reference_date": "2026-10-31",
+  "demo_key": "demo-v2:42:2026-10-31:240",
+  "database_read_only": true,
+  "kpis": {
+    "clients": 240,
+    "applications": 241,
+    "decisions": 241,
+    "approvals": 164,
+    "rejections": 77,
+    "pending": 0,
+    "approval_rate": 0.6804979253112033,
+    "disbursed_count": 117,
+    "disbursed_amount": 3937932.7,
+    "active_agreements": 89,
+    "closed_agreements": 28,
+    "active_portfolio_balance": 2409141.22,
+    "agreements_in_arrears": 46,
+    "overdue_amount": 464259.65,
+    "payments_received": 1683139.05,
+    "principal_received": 1528791.48,
+    "interest_received": 154347.57,
+    "average_disbursed_amount": 33657.54,
+    "average_risk": 0.06722294569952836,
+    "total_credit_limits": 233571.09,
+    "drawn_balance": 124028.26
+  },
+  "generated_metadata": {
+    "agreements": 117,
+    "applications": 241,
+    "approvals": 164,
+    "assumptions": [
+      "Fictional names; synthetic calendar, payment behavior and interest rates.",
+      "Source income, product and employment distributions; source amounts are the starting distribution.",
+      "70% of generated requests capped to a sampled 12-25% monthly-income payment budget under the demo terms; 30% retain source-size requests. Product limits also apply.",
+      "Terms sampled from approved historical applications; not recovered current-loan terms.",
+      "Unknown source employment tenure is zero in the generated current demo scenario, not an assertion about the historical record.",
+      "No synthetic operation is used as an observed ML target."
+    ],
+    "clients": 240,
+    "demo_key": "demo-v2:42:2026-10-31:240",
+    "generator_version": "demo-v2",
+    "is_synthetic": true,
+    "model_predictions_are_real": true,
+    "model_version": "homecredit-20261117T080502Z",
+    "reference_date": "2026-10-31",
+    "rejections": 77,
+    "repeat_application_id": 241,
+    "scenarios": {
+      "arrears": 18,
+      "closed": 18,
+      "late_recovered": 18,
+      "partial": 18,
+      "revolving_arrears": 2,
+      "revolving_drawn_and_available": 7,
+      "timely": 35
+    },
+    "seed": 42,
+    "source_kind": "synthetic"
+  },
+  "checks": [
+    "every event/due date: independent SQL principal, persisted payment allocations, limits, historical exclusion",
+    "integrity, foreign keys, provenance, actual scenario coverage",
+    "month-end historical balances, eight filter populations, CSV/SQL/KPI totals",
+    "saved actual model predictions reproduce; prohibited identifiers/demographics absent"
+  ],
+  "audited_agreement_dates": 991,
+  "scenario_examples": {
+    "closed": [
+      1,
+      8,
+      14,
+      21,
+      27
+    ],
+    "partial": [
+      3,
+      10,
+      16,
+      23,
+      29
+    ],
+    "arrears": [
+      2,
+      3,
+      9,
+      10,
+      15
+    ],
+    "late_recovered": [
+      4,
+      11,
+      30,
+      36,
+      49
+    ],
+    "revolving_drawn_available": [
+      7,
+      17,
+      46,
+      50,
+      51
+    ]
+  },
+  "audited_month_end_dates": [
+    "2025-12-31",
+    "2026-01-31",
+    "2026-02-28",
+    "2026-03-31",
+    "2026-04-30",
+    "2026-05-31",
+    "2026-06-30",
+    "2026-07-31",
+    "2026-08-31",
+    "2026-09-30",
+    "2026-10-31"
+  ],
+  "audited_filter_populations": [
+    {
+      "product": "cash"
+    },
+    {
+      "product": "revolving"
+    },
+    {
+      "status": "Closed"
+    },
+    {
+      "status": "Active"
+    },
+    {
+      "client_type": "Repeat"
+    },
+    {
+      "client_type": "New"
+    },
+    {
+      "source_kind": "synthetic"
+    },
+    {
+      "product": "revolving",
+      "status": "Active",
+      "source_kind": "synthetic"
+    }
+  ],
+  "reproduced_model_predictions": 5,
+  "tests_run": 4,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "all_checks_passed": true,
+  "measured_test_seconds": 2.973854,
+  "generated_at": "2026-11-17T08:11:28.117990+00:00"
+}
